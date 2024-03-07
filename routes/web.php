@@ -14,5 +14,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.master');
 });
+
+Route::get('/home', function () {
+    return view('layouts.home');
+})->name('home');
+
+Route::get('/single-post', function () {
+    return view('single-post');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+/// admin routes
+Route::get('/administrator', function () {
+    return view('admin.AdminHome');
+});
+
+Route::get('/administrator/login', function () {
+    return view('admin.login');
+});
+
